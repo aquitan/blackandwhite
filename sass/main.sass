@@ -1,0 +1,395 @@
+//Basic styles
+
+*
+ padding: 0
+ margin: 0
+
+@import 'addstyles'
+
+body
+ font-size: 17px
+ font-family: 'Merriweather', sans-serif
+
+.container
+ margin-left: auto
+ margin-right: auto
+
+
+//Header styles
+
+header
+ background-color: $bg-white
+ min-height: 900px
+ ul
+  display: flex
+  text-decoration: none
+  text-align: center
+  justify-content: center
+  align-items: center
+  li
+   list-style-type: none
+   display: inline-block
+   padding-right: 30px
+   color: $grey-font
+   font-size: 14px
+   -webkit-transition: all 0.2s
+   -o-transition: all 0.2s
+   transition: all 0.2s
+   &:hover
+    color: $black-font
+
+.header-info
+ text-align: center
+ margin-top: 150px
+ padding: 20px
+ margin-left: auto
+ margin-right: auto
+ p
+  padding-top: 10px
+  color: $grey-font
+ &_btn
+  position: relative
+  display: inline-block
+  padding-top: 20px
+  margin-top: 45px
+  background-color: transparent
+  border-top: 1px solid $bg-black
+  border-bottom: 1px solid $bg-black
+  width: 200px
+  height: 60px
+  cursor: pointer
+  text-transform: uppercase
+  letter-spacing: 2px
+  z-index: 1
+  transition: all 0.3s
+  transition-delay: 0.3s
+  &:hover
+   color: $bg-white
+   &:before
+    height: 100%
+   &:after
+    height: 100%
+  &:before
+   content: ''
+   display: block
+   position: absolute
+   z-index: -1
+   top: 0
+   left: 0
+   height: 0
+   width: 100%
+   background-color: $bg-black
+   transition: all 0.3s
+   transition-delay: 0.2s
+  &:after
+   content: ''
+   position: absolute
+   z-index: -1
+   bottom: 0
+   left: 0
+   width: 100%
+   height: 0
+   border: 1px solid $bg-black
+   border-top: 0
+   border-bottom: 0
+   transition: all 0.2s ease-out
+  
+
+//Main info block
+
+.main-info
+ position: relative
+ background-color: $bg-black
+ color: $grey-font
+ min-height: 1200px
+ background-image: url(../img/bld-white.png), url(../img/bld-black.png)
+ background-repeat: no-repeat, no-repeat
+ background-position: 88% 101%, 80% 99%
+ &:before
+  content: ''
+  position: absolute
+  display: block
+  padding: auto
+  height: 1200px	
+  width: 5px
+  background-color: $white-font
+  margin-left: 50%
+ &_first, &_second
+  min-height: 400px
+ h2
+  color: $white-font
+  font-size: 48px
+  padding-bottom: 30px
+ &_second
+  margin-top: 100px
+
+.info-block_one
+ position: relative
+ padding-right: 80px
+ padding-bottom: 40px
+ &:before
+  content: ''
+  display: block
+  position: absolute
+  top: 10px
+  right: -30px
+  width: 25px
+  height: 25px
+  border: 5px solid $white-font
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  -ms-border-radius: 50%
+  -o-border-radius: 50%
+  border-radius: 50%
+  background-color: $bg-black
+
+.info-block_two
+ position: relative
+ padding-left: 80px
+ &:before
+  content: ''
+  display: block
+  position: absolute
+  top: 10px
+  left: -25px
+  width: 25px
+  height: 25px
+  border: 5px solid $white-font
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  -ms-border-radius: 50%
+  -o-border-radius: 50%
+  border-radius: 50%
+  background-color: $bg-black
+
+
+
+.our-team
+ background-color: $bg-white
+ min-height: 1000px
+ text-align: center
+ &_specs
+  color: #b3b3b3
+  font-size: 13px
+ &_intro
+  margin-top: 80px
+  font-size: 34px
+ &_team
+  margin-top: 120px
+  min-height: 500px
+ &_socials
+  margin-top: 22px
+
+//Advantage block
+.advantage
+  position: relative
+  -webkit-transform: skew(0, -4deg)
+  -ms-transform: skew(0, -4deg)
+  -o-transform: skew(0, -4deg)
+  transform: skew(0, -4deg)
+  min-height: 1200px
+  background-color: $bg-black
+  overflow: hidden
+  &_wrap
+   position: absolute
+   left: 0
+   top: 0
+   -webkit-transform: skew(0, 4deg)
+   -ms-transform: skew(0, 4deg)
+   -o-transform: skew(0, 4deg)
+   transform: skew(0, 4deg)
+   height: 800px
+   width: 100%
+   margin-top: 100px
+  &_intro
+   color: $bg-white
+   text-align: center
+  &_specs
+   display: flex
+   justify-content: space-around
+   align-items: center
+   margin-top: 200px
+   margin-bottom: 320px
+   text-align: center
+   color: $bg-white
+   p
+    padding: 10px
+    color: #898888
+    font-size: 18px
+   &_item
+    position: relative
+    height: 172px
+    width: 172px
+    border: 6px solid $bg-white
+    border-radius: 50%
+    text-align: center
+    line-height: 200px
+    left: 50%
+    margin-left: -85px
+    margin-bottom: 50px
+  &_img
+   position: absolute
+   width: 600px
+   height: 800px
+   margin-left: -260px
+   bottom: -100px
+   left: 50%
+   -webkit-transform: skew(0, 4deg)
+   -ms-transform: skew(0, 4deg)
+   -o-transform: skew(0, 4deg)
+   transform: skew(0, 4deg)
+   z-index: -1
+  &_visit
+   text-align: center
+   z-index: 999
+  &_btn
+    position: relative
+    display: inline-block
+    padding-top: 20px
+    margin-top: 5px
+    background-color: transparent
+    border-top: 1px solid $bg-white
+    border-bottom: 1px solid $bg-white
+    color: $bg-white
+    text-align: center
+    width: 200px
+    height: 60px
+    cursor: pointer
+    text-transform: uppercase
+    letter-spacing: 2px
+    z-index: 1
+    transition: all 0.3s
+    transition-delay: 0.3s
+    color: $bg-white
+    z-index: 99 
+    &:hover
+     color: $bg-black
+     &:before
+      height: 100%
+     &:after
+      height: 100%
+    &:before
+     content: ''
+     display: block
+     position: absolute
+     z-index: -1
+     top: 0
+     left: 0
+     height: 0
+     width: 100%
+     background-color: $bg-white
+     transition: all 0.3s
+     transition-delay: 0.2s
+    &:after
+     content: ''
+     position: absolute
+     z-index: -1
+     bottom: 0
+     left: 0
+     width: 100%
+     height: 0
+     border: 1px solid $bg-white
+     border-top: 0
+     border-bottom: 0
+     transition: all 0.2s ease-out
+
+
+footer 
+ min-height: 400px
+
+.footer_promo
+ padding-top: 200px
+ text-align: center
+ h3
+  font-size: 34px
+  padding-bottom: 13px
+  color: #1d1e1f
+ p
+  color: #898888
+
+.contacts-info
+ margin-top: 65px
+ margin-bottom: 150px
+ text-align: center
+ p
+  color: #898888
+  font-size: 12px
+ i
+  font-size: 24px
+  padding: 12px
+
+
+form
+ margin-bottom: 220px
+
+.button
+ position: relative
+ text-align: center
+ background-color: transparent
+ color: $bg-white
+ border: none
+ width: 100%
+ height: 50px
+ margin-top: 10px
+ margin-bottom: 10px
+ font-size: 17px
+ line-height: 50px 
+ z-index: 999
+ transition: all 0.2s
+ border-top: 1px solid $bg-black
+ border-bottom: 1px solid $bg-black
+ cursor: pointer
+ &:hover
+  color: $bg-black
+  &:before
+   height: 100%
+  &:after
+   height: 0
+ &:before
+  content: ''
+  position: absolute
+  left: 0
+  top: 0
+  display: block
+  width: 100%
+  height: 0
+  z-index: -1
+  transition: all 0.2s
+ &:after
+  content: ''
+  position: absolute
+  left: 0
+  bottom: 0
+  display: block
+  width: 100%
+  height: 100%
+  background-color: $bg-black
+  z-index: -1
+  transition: all 0.2s
+
+
+input
+ display: block
+ width: 100%
+ height: 50px
+ margin-top: 10px
+ margin-bottom: 10px
+ text-align: center
+ font-size: 15px
+ padding: 10px
+textarea
+ display: block
+ width: 100%
+ height: 190px
+ padding: 10px
+ font-family: 'Merriweather', sans-serif
+
+*
+ outline: none
+
+.copyright
+ margin-bottom: 55px
+ font-size: 14px
+ color: #3b3b3b
+
+//
