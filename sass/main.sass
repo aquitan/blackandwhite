@@ -19,7 +19,7 @@ body
 
 header
  background-color: $bg-white
- min-height: 900px
+ height: 100vh
  ul
   display: flex
   text-decoration: none
@@ -37,6 +37,64 @@ header
    transition: all 0.2s
    &:hover
     color: $black-font
+
+//Navbar small
+.main-nav-small
+  display: none
+  margin-top: 20px
+  margin-left: 20px
+.nav-bar
+  position: relative
+  height: 20px
+  width: 35px
+  &:hover
+    span
+      -webkit-transform: scale(1.2)
+      -ms-transform: scale(1.2)
+      -o-transform: scale(1.2)
+      transform: scale(1.2)
+      -webkit-transition: all 0.2s ease-out
+      -o-transition: all 0.2s ease-out
+      transition: all 0.2s ease-out
+  span
+    display: block
+    position: absolute
+    width: 30px
+    height: 3px
+    background-color: $bg-black
+    border-radius: 5%
+    box-shadow: 1px 1px 2px $black-font
+    &:first-child
+      top: 0
+      left: 0
+    &:last-child
+      bottom: 0
+      left: 0
+    &:nth-child(2)
+      top: 8px
+//Navbar Active
+
+.nav-bar_active
+  span:first-child
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+    top: 6px
+  span:last-child
+    -webkit-transform: rotate(-45deg)
+    -ms-transform: rotate(-45deg)
+    -o-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    bottom: 10px
+  span:nth-child(2)
+    -webkit-transform: translateX(-100px)
+    -ms-transform: translateX(-100px)
+    -o-transform: translateX(-100px)
+    transform: translateX(-100px)
+    opacity: 0
+    transition: all 0.2s ease-out
+
 
 .header-info
  text-align: center
@@ -142,6 +200,18 @@ header
   -o-border-radius: 50%
   border-radius: 50%
   background-color: $bg-black
+  -webkit-transition: all 0.2s ease-out
+  -o-transition: all 0.2s ease-out
+  transition: all 0.2s ease-out
+
+.info-block_one:hover
+  &:before
+    -webkit-transform: scale(1.5, 1.5)
+    -ms-transform: scale(1.5, 1.5)
+    -o-transform: scale(1.5, 1.5)
+    transform: scale(1.5, 1.5)
+    background-color: #f06148
+
 
 .info-block_two
  position: relative
@@ -161,8 +231,17 @@ header
   -o-border-radius: 50%
   border-radius: 50%
   background-color: $bg-black
+  -webkit-transition: all 0.2s ease-out
+  -o-transition: all 0.2s ease-out
+  transition: all 0.2s ease-out
 
-
+.info-block_two:hover
+  &:before
+    -webkit-transform: scale(1.5, 1.5)
+    -ms-transform: scale(1.5, 1.5)
+    -o-transform: scale(1.5, 1.5)
+    transform: scale(1.5, 1.5)
+    background-color: #f06148
 
 .our-team
  background-color: $bg-white
@@ -392,4 +471,35 @@ textarea
  font-size: 14px
  color: #3b3b3b
 
-//
+//Adaptive quaries
+
+@media (min-width: 320px) and (max-width: 765px)
+
+  header
+    min-height: 800px
+  .main-nav
+    display: none
+  .main-nav-small
+    display: block
+  .main-info:before
+    display: none
+  .info-block_one
+    border-bottom: 1px solid $bg-white
+  .info-block_one:before
+    display: none
+  .info-block_two
+    padding-left: 0
+    border-bottom: 1px solid $bg-white
+  .info-block_two:before
+    display: none 
+  
+  .advantage_specs
+    &_cont
+      padding-top: 20px
+    flex-wrap: wrap
+    margin: 25px
+    p
+      display: none
+
+  .copyright
+    text-align: center
